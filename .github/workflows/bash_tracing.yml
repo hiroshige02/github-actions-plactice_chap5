@@ -1,0 +1,11 @@
+name: Bash Tracing
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: | #set -x でトレーシングオプションを有効化
+          set -x 
+          date
+          hostname
+
