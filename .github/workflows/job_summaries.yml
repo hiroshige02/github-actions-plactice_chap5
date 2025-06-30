@@ -1,0 +1,10 @@
+name: Job Summaries
+on: push
+jobs:
+  logs:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: | #マークダウンテキストをジョブサマリーに出力
+          echo "## Example Title :rocket" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
