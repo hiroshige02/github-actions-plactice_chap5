@@ -1,0 +1,10 @@
+name: Log Group
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          echo "::group::Show Environment Variables" #ロググループ化開始
+          printenv
+          echo "::endgroup::" #ロググループ化終了

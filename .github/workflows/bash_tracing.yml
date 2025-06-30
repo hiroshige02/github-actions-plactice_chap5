@@ -4,8 +4,8 @@ jobs:
   log:
     runs-on: ubuntu-24.04
     steps:
-      - run: | #set -x でトレーシングオプションを有効化
-          set -x 
+      - run: | 
+          set -x #set -x でトレーシングオプションを有効化
           date
           hostname
 
