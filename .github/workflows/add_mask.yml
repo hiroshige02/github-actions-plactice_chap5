@@ -1,0 +1,10 @@
+name: Add Mask
+on: push
+jobs:
+  logs:
+    runs-on: ubuntu-24.04
+    env:
+      PASSWORD: SuperSecretValue
+    steps:
+      - run: echo "::add-mask::${PASSWORD}" #ログ出力時にマスク(Secrets登録時と同じ)
+      - run: echo "${PASSWORD}"
