@@ -1,0 +1,17 @@
+name: Sequential Jobs
+on: push
+jobs:
+  first:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: sleep 30 && echo "First job"
+  second:
+    runs-on: ubuntu-24.04
+    needs: [first] #依存関係がある場合に指定できる
+    steps:
+      - run: sleep 20 && echo "Second job"
+  third:
+    runs-on: ubuntu-24.04
+    needs: [second] #依存関係がある場合に指定できる
+    steps:
+      - run: sleep 20 && echo "Third job"
