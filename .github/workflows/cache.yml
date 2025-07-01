@@ -9,7 +9,7 @@ jobs:
         with:
           key: test-${{ runner.os }}-${{ github.sha }} #キャッシュキー
           path: ${{ github.workspace }}/dummy  #キャッシュ対象のパス
-          restore-keys: |
+          restore-keys: | #リストアキ―
             test-${{ runner.os }}-
       - run: |
           if [[ -f "${GITHUB_WORKSPACE}/dummy" ]]; then exit 0; fi #ダミーファイルの確認
