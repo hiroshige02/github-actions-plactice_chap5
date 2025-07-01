@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4 #アーティファクトのダウンロード
         with:
-          name: uploaded #アーティファクト名
+          name: uploaded #ダウンロード対象のアーティファクト名
           path: downloaded #ダウンロード先のパス
       - run: cat downloaded/date.txt #アーティファクトを標準出力
 
