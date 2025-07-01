@@ -1,0 +1,19 @@
+name: Manual Matrix
+on: push
+jobs:
+  print:
+    strategy:
+      matrix: #多次元マトリックスの定義
+        include:
+          - os: ubuntu-24.04 #バージョン組み合わせ１
+            version: 20
+          - os: macos-latest #バージョン組み合わせ2
+            version: 18
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }}
+      - run: echo "${RUNNER_OS}" && node --version
+
+
