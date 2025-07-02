@@ -4,3 +4,13 @@ updates:
     directory: / #パッケージマニフェストの配置先ディレクトリ
     schedule: #バージョンアップスケジュール
       interval: daily
+    ignore:
+      - dependency-name: actions/upload-artifact
+        versions:
+          - 4.3.0
+          - 4.3.1
+      - dependency-name: 'actions/*' #アスタリスクは任意文字列にマッチ
+        update-types:
+          - version-update:
+            update-types:
+              - version-update: semver-major
