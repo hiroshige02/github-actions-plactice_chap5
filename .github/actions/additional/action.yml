@@ -1,6 +1,7 @@
 name: Script Actions
 on: push
 runs:
-  steps:
+  using: composite #アクションの実装方式
+  steps:    
     - run: ./script.sh
       shell: bash
