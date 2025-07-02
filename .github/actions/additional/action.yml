@@ -3,5 +3,5 @@ on: push
 runs:
   using: composite #アクションの実装方式
   steps:    
-    - run: ./script.sh
+    - run: "${GITHUB_ACTION_PATH}/script.sh"
       shell: bash
