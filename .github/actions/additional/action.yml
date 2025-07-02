@@ -1,0 +1,6 @@
+name: Script Actions
+on: push
+runs:
+  steps:
+    - run: ./script.sh
+      shell: bash

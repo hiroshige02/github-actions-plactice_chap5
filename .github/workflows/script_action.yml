@@ -1,0 +1,8 @@
+name: Script Actions
+on: push
+jobs:
+  additional:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4 #ローカルアクション呼び出し前にチェックアウト
+      - uses: ./.github/actions/additional/
