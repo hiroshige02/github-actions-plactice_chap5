@@ -1,0 +1,7 @@
+#リポジトリ全体 or 他のマッチする設定が無い場合 のコードオーナー
+* @octocat
+#特定のファイル種別のみコードオーナーをTeamに設定する
+*.txt @example-org/octocat-team
+
+#特定ディレクトリ配下のコードオーナーを、複数アカウントへ設定する
+.github/workflows/ @github @example-org/octocat-team
