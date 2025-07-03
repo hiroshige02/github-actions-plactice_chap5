@@ -7,8 +7,8 @@ changelog:
       labels:
         - bug
         - fixes
-  # exclude:
-  #   labels: #除外するラベル
-  #     - dependencies
-  #   authors: #除外するプルリクエスト作成者
-  #     - dependabot
+  exclude:
+    labels: #除外するラベル
+      - dependencies
+    authors: #除外するプルリクエスト作成者
+      - dependabot
