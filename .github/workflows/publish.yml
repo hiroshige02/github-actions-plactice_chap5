@@ -31,6 +31,6 @@ jobs:
       - uses: docker/build-push-action@v5 #コンテナイメージのビルドとプッシュ
         with:
           push: true
-          context: docker/auto_release/
+          context: docker/example/
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
