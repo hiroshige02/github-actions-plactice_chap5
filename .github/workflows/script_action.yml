@@ -4,6 +4,6 @@ jobs:
   additional:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5 #ローカルアクション呼び出し前にチェックアウト
+      - uses: actions/checkout@v6 #ローカルアクション呼び出し前にチェックアウト
       - run: chmod +x ./.github/actions/additional/script.sh
       - uses: ./.github/actions/additional/
